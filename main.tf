@@ -12,7 +12,7 @@ terraform {
 
 resource "aws_ecr_repository" "ecr-app" {
   name                 = var.ecr_repo_name
-  image_tag_mutability = "IMMUTABLE"
+  image_tag_mutability = var.ecr_repo_tag_mutability
   tags = merge(
       local.tags,
       var.ecr_repo_tags

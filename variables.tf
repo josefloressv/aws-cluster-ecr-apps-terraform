@@ -10,6 +10,11 @@ variable "ecr_repo_name" {
     description = "The name of the ECR repository"
 }
 
+variable "ecr_repo_tag_mutability" {
+    type = string
+    description = "The tag mutability of the ECR repository"
+}
+
 variable "ecr_repo_tags" {
     type = map(string)
     description = "The tags to apply to the ECR repository"
